@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<meta name="scarecrow" content="http://duanwentao.github.io"/>
+<title>转动方块(小游戏)</title>
 </head>
 <style>
 *{ margin:0; padding:0;}
@@ -44,13 +45,13 @@
 		}(),
 		exFn : function(){
 			var obj = {
-				li : document.getElementsByTagName('li'),
+				li : document.getElementsByTagName('li'),  //要转动的元素
 				len : document.getElementsByTagName('li').length,	
-				iNow : 0,
-				timer : null,
-				bBtn : true,
-				qqq : 5,
-				time : 100
+				iNow : 0,  //默认从第一个开始
+				timer : null,  //定时器
+				bBtn : true,  //开关
+				qqq : 5,  //默认转的圈数
+				time : 100  //默认时间间隔(ms)
 			};
 			document.getElementsByClassName('start')[0].onclick = function(){
 				var num = Math.floor(Math.random()*obj.len+1); //随机多少数
@@ -80,15 +81,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<meta name="scarecrow" content="http://duanwentao.github.io"/>
+<title>转动方块(小游戏)</title>
 </head>
 <style>
 *{ margin:0; padding:0;}
@@ -63,20 +64,20 @@
 <script>
 function Game(opt){
 	this.settings = {
-		query : document.querySelectorAll('li'),
-		qqq : 5,
-		time : 100,
-		clickd : document.querySelector('.start'),
+		query : document.querySelectorAll('li'),  //要转动的一些元素
+		qqq : 5,  //默认转的圈数
+		time : 100, //默认时间间隔(ms)
+		clickd : document.querySelector('.start'), //点击的元素
 	};
 	var opt = opt ? opt : '';
 	for(var attr in opt){
-		this.settings[attr] = opt[attr];
+		this.settings[attr] = opt[attr];  //参数覆盖默认
 	};
 	this.len = this.settings.query.length,
-	this.iNow = 0;
-	this.timer = null;
-	this.bBtn = true;
-	this.num = '';
+	this.iNow = 0; //从第一个开始转动
+	this.timer = null;  //定时器
+	this.bBtn = true;  //开关
+	this.num = '';  //随机数
 };
 Game.prototype.init = function(){
 	var This = this;
@@ -120,21 +121,11 @@ window.onload = function(){
 	}).init();
 	new Game({
 		query : document.querySelectorAll('#div2 li'),
+		qqq : 3,
+		time : 200,
 		clickd : document.querySelector('#div2 .start')		
 	}).init();
 };
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

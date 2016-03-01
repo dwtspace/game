@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<meta name="scarecrow" content="http://duanwentao.github.io"/>
+<title>转动方块(小游戏)</title>
 </head>
 <style>
 *{ margin:0; padding:0;}
@@ -125,6 +126,8 @@ window.onload = function(){
 	}).init();
 	new Game({
 		query : document.querySelectorAll('#div2 li'),
+		qqq : 3,
+		time : 200,
 		clickd : document.querySelector('#div2 .start')		
 	}).init();
 };
